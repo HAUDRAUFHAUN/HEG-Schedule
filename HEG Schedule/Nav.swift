@@ -9,7 +9,16 @@ import SwiftUI
 
 struct Nav: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List{
+                NavigationLink(destination: Home() ){Label("Home", systemImage: "house")}
+      
+                NavigationLink(destination: News()) {Label("News", systemImage: "network")}
+              
+                NavigationLink(destination: VPlan()) {Label("Vertretungsplan", systemImage: "calendar.badge.clock")}
+            } .navigationTitle("HEG Schedule")
+        }
+      
     }
 }
 
