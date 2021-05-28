@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,10 @@
 		2212AFEF265D854300002FC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2212AFEE265D854300002FC9 /* Preview Assets.xcassets */; };
 		2212AFFB265D8A6400002FC9 /* Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212AFFA265D8A6400002FC9 /* Nav.swift */; };
 		2212AFFD265DA20600002FC9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212AFFC265DA20600002FC9 /* Home.swift */; };
+		22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22503F7E265EAE4000254DC7 /* FeedKit */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22EA2B2F265E62F1008E0EC6 /* VPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2E265E62F1008E0EC6 /* VPlan.swift */; };
+		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,7 @@
 		22503F71265EA56300254DC7 /* HEG Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HEG Schedule.entitlements"; sourceTree = "<group>"; };
 		22EA2B2A265E5BB0008E0EC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		22EA2B2E265E62F1008E0EC6 /* VPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlan.swift; sourceTree = "<group>"; };
+		22FB6807266030050017FEE6 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +71,7 @@
 				2212AFFC265DA20600002FC9 /* Home.swift */,
 				2212AFFA265D8A6400002FC9 /* Nav.swift */,
 				22EA2B2E265E62F1008E0EC6 /* VPlan.swift */,
-				22EA2B2A265E5BB0008E0EC6 /* News.swift */,
+				22FB68062660298F0017FEE6 /* News */,
 				2212AFEB265D854300002FC9 /* Assets.xcassets */,
 				2212AFF0265D854300002FC9 /* Info.plist */,
 				2212AFED265D854300002FC9 /* Preview Content */,
@@ -81,6 +85,15 @@
 				2212AFEE265D854300002FC9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22FB68062660298F0017FEE6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				22EA2B2A265E5BB0008E0EC6 /* News.swift */,
+				22FB6807266030050017FEE6 /* NewsItem.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +112,9 @@
 			dependencies = (
 			);
 			name = "HEG Schedule";
+			packageProductDependencies = (
+				22503F7E265EAE4000254DC7 /* FeedKit */,
+			);
 			productName = "HEG Schedule";
 			productReference = 2212AFE4265D853E00002FC9 /* HEG Schedule.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 2212AFDB265D853D00002FC9;
+			packageReferences = (
+				22503F7D265EAE4000254DC7 /* XCRemoteSwiftPackageReference "FeedKit" */,
+			);
 			productRefGroup = 2212AFE5265D853E00002FC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2212AFEA265D853E00002FC9 /* ContentView.swift in Sources */,
+				22FB6808266030050017FEE6 /* NewsItem.swift in Sources */,
 				2212AFE8265D853E00002FC9 /* HEG_ScheduleApp.swift in Sources */,
 				2212AFFD265DA20600002FC9 /* Home.swift in Sources */,
 				22EA2B2F265E62F1008E0EC6 /* VPlan.swift in Sources */,
@@ -352,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22503F7D265EAE4000254DC7 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22503F7E265EAE4000254DC7 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22503F7D265EAE4000254DC7 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2212AFDC265D853D00002FC9 /* Project object */;
 }
