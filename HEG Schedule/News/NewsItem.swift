@@ -15,11 +15,11 @@ struct NewsItem: View {
     
     var body: some View {
         Link(destination: URL(string: link)!){
-            
-            HStack {
-                Text(title).bold()
-                Text(date, style: .date).italic()
-            }.frame(width: .greatestFiniteMagnitude, alignment: .leading).padding().multilineTextAlignment(.leading)}
+            LazyVGrid(columns:[GridItem(.flexible()), GridItem(.flexible())] ) {
+                Text(title).bold().multilineTextAlignment(.leading)
+                Text(date, style: .date).italic().multilineTextAlignment(.leading)
+            }.frame(alignment: .leading).padding().multilineTextAlignment(.leading)
+        }
         }
     }
 
