@@ -65,7 +65,7 @@
 		2212AFE6265D853E00002FC9 /* HEG Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				223214032662C3040038CA07 /* Vplan */,
+				223214032662C3040038CA07 /* VPlan */,
 				22503F71265EA56300254DC7 /* HEG Schedule.entitlements */,
 				2212AFE7265D853E00002FC9 /* HEG_ScheduleApp.swift */,
 				2212AFE9265D853E00002FC9 /* ContentView.swift */,
@@ -87,12 +87,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		223214032662C3040038CA07 /* Vplan */ = {
+		223214032662C3040038CA07 /* VPlan */ = {
 			isa = PBXGroup;
 			children = (
 				223214002662C2AA0038CA07 /* VPlan.swift */,
 			);
-			path = Vplan;
+			path = VPlan;
 			sourceTree = "<group>";
 		};
 		22FB68062660298F0017FEE6 /* News */ = {
