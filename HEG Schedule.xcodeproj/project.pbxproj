@@ -13,9 +13,9 @@
 		2212AFEF265D854300002FC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2212AFEE265D854300002FC9 /* Preview Assets.xcassets */; };
 		2212AFFB265D8A6400002FC9 /* Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212AFFA265D8A6400002FC9 /* Nav.swift */; };
 		2212AFFD265DA20600002FC9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212AFFC265DA20600002FC9 /* Home.swift */; };
+		223214012662C2AA0038CA07 /* VPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223214002662C2AA0038CA07 /* VPlan.swift */; };
 		22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22503F7E265EAE4000254DC7 /* FeedKit */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
-		22EA2B2F265E62F1008E0EC6 /* VPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2E265E62F1008E0EC6 /* VPlan.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +28,9 @@
 		2212AFF0265D854300002FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2212AFFA265D8A6400002FC9 /* Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nav.swift; sourceTree = "<group>"; };
 		2212AFFC265DA20600002FC9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		223214002662C2AA0038CA07 /* VPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlan.swift; sourceTree = "<group>"; };
 		22503F71265EA56300254DC7 /* HEG Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HEG Schedule.entitlements"; sourceTree = "<group>"; };
 		22EA2B2A265E5BB0008E0EC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		22EA2B2E265E62F1008E0EC6 /* VPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlan.swift; sourceTree = "<group>"; };
 		22FB6807266030050017FEE6 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,12 +65,12 @@
 		2212AFE6265D853E00002FC9 /* HEG Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				223214032662C3040038CA07 /* Vplan */,
 				22503F71265EA56300254DC7 /* HEG Schedule.entitlements */,
 				2212AFE7265D853E00002FC9 /* HEG_ScheduleApp.swift */,
 				2212AFE9265D853E00002FC9 /* ContentView.swift */,
 				2212AFFC265DA20600002FC9 /* Home.swift */,
 				2212AFFA265D8A6400002FC9 /* Nav.swift */,
-				22EA2B2E265E62F1008E0EC6 /* VPlan.swift */,
 				22FB68062660298F0017FEE6 /* News */,
 				2212AFEB265D854300002FC9 /* Assets.xcassets */,
 				2212AFF0265D854300002FC9 /* Info.plist */,
@@ -85,6 +85,14 @@
 				2212AFEE265D854300002FC9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		223214032662C3040038CA07 /* Vplan */ = {
+			isa = PBXGroup;
+			children = (
+				223214002662C2AA0038CA07 /* VPlan.swift */,
+			);
+			path = Vplan;
 			sourceTree = "<group>";
 		};
 		22FB68062660298F0017FEE6 /* News */ = {
@@ -171,11 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223214012662C2AA0038CA07 /* VPlan.swift in Sources */,
 				2212AFEA265D853E00002FC9 /* ContentView.swift in Sources */,
 				22FB6808266030050017FEE6 /* NewsItem.swift in Sources */,
 				2212AFE8265D853E00002FC9 /* HEG_ScheduleApp.swift in Sources */,
 				2212AFFD265DA20600002FC9 /* Home.swift in Sources */,
-				22EA2B2F265E62F1008E0EC6 /* VPlan.swift in Sources */,
 				22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */,
 				2212AFFB265D8A6400002FC9 /* Nav.swift in Sources */,
 			);
