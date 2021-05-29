@@ -15,9 +15,15 @@ struct NewsItem: View {
     
     var body: some View {
         Link(destination: URL(string: link)!){
-            LazyVGrid(columns:[GridItem(.flexible()), GridItem(.flexible())] ) {
-                Text(title).bold().multilineTextAlignment(.leading)
-                Text(date, style: .date).italic().multilineTextAlignment(.leading)
+            VStack {
+                HStack{
+                    Text(title).bold().multilineTextAlignment(.leading)
+                    Spacer()
+                }
+                HStack {
+                    Text(date, style: .date).italic().multilineTextAlignment(.leading)
+                    Spacer()
+                }.padding(.init(top: 2, leading: 0, bottom: 0, trailing: 0))
             }.frame(alignment: .leading).padding().multilineTextAlignment(.leading)
         }
         }
