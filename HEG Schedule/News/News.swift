@@ -14,7 +14,6 @@ struct News: View {
     
     var body: some View {
         VStack{
-            Text("News").font(.largeTitle).multilineTextAlignment(.leading)
             if((rssFeed?.items!) != nil){
             List {
                 NewsItem(title: (rssFeed?.items![0].title) as! String, date: (rssFeed?.items![0].pubDate) as! Date, link: (rssFeed?.items![0].link) as! String)
@@ -30,7 +29,7 @@ struct News: View {
             }} else {
                 Text("Loading...")
             }
-        }.onAppear(perform: loadData)
+        }.onAppear(perform: loadData).navigationTitle("News")
     }
     
     func loadData() {
