@@ -9,7 +9,13 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text("Home View")
+        VStack {
+            VStack {
+                NavigationLink(destination: News()) {Label("News", systemImage: "network")}.padding()
+              
+                NavigationLink(destination: VPlan()) {Label("Vertretungsplan", systemImage: "calendar.badge.clock")}.padding()
+            }
+        }.navigationTitle("Home")
     }
 }
 
