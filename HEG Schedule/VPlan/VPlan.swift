@@ -7,9 +7,48 @@
 
 import SwiftUI
 
+
+struct Timetable: Codable, Identifiable {
+    let id = UUID()
+    let title: String
+    let url: String
+    let date: String
+    let preview: String
+    let secondTitle: String
+}
+
 struct VPlan: View {
+    @State var results = [Timetable]()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            if(results.count > 0){
+                List(results) { item in
+                    VPlanItem(timetabledata: item)
+            }} else {
+                Text("Loading...")
+            }}.onAppear(perform: {
+                loadPlans()
+            }).navigationTitle("Vertretungspläne")
+    }
+    
+    func loadPlans(){
+        guard let url = URL(string: "https://hegschedule-server-haudraufhaun.vercel.app/") else {
+            print("Invalid URL")
+            return
+        }
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data {
+                    if let response = try? JSONDecoder().decode([Timetable].self, from: data) {
+                        DispatchQueue.main.async {
+                            self.results = response
+                        }
+                        return
+                    }
+                }
+            }.resume()
     }
 }
 
