@@ -20,6 +20,7 @@
 		22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC80242663EBC00059FADD /* VPlanRender.swift */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
+		22FCCFA726656392005F5F29 /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCCFA626656392005F5F29 /* LoadingSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		22CC80242663EBC00059FADD /* VPlanRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanRender.swift; sourceTree = "<group>"; };
 		22EA2B2A265E5BB0008E0EC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		22FB6807266030050017FEE6 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		22FCCFA626656392005F5F29 /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		2212AFE6265D853E00002FC9 /* HEG Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				22FCCFA52665637A005F5F29 /* Assets */,
 				223214032662C3040038CA07 /* VPlan */,
 				22503F71265EA56300254DC7 /* HEG Schedule.entitlements */,
 				2212AFE7265D853E00002FC9 /* HEG_ScheduleApp.swift */,
@@ -110,6 +113,14 @@
 				22FB6807266030050017FEE6 /* NewsItem.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		22FCCFA52665637A005F5F29 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				22FCCFA626656392005F5F29 /* LoadingSpinner.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				22FB6808266030050017FEE6 /* NewsItem.swift in Sources */,
 				2212AFE8265D853E00002FC9 /* HEG_ScheduleApp.swift in Sources */,
 				22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */,
+				22FCCFA726656392005F5F29 /* LoadingSpinner.swift in Sources */,
 				2212AFFD265DA20600002FC9 /* Home.swift in Sources */,
 				22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */,
 				2212AFFB265D8A6400002FC9 /* Nav.swift in Sources */,

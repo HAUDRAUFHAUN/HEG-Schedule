@@ -27,7 +27,7 @@ struct News: View {
                 NewsItem(title: (rssFeed?.items![8].title) as! String, date: (rssFeed?.items![8].pubDate) as! Date, link: (rssFeed?.items![8].link) as! String)
                 NewsItem(title: (rssFeed?.items![9].title) as! String, date: (rssFeed?.items![9].pubDate) as! Date, link: (rssFeed?.items![9].link) as! String)
             }} else {
-                Text("Loading...")
+                LoadingSpinner()
             }
         }.onAppear(perform: loadData).navigationTitle("News")
     }
