@@ -6,15 +6,30 @@
 //
 
 import SwiftUI
+import Liquid
 
 struct Home: View {
+    private let greetings = ["Willkommen", "Welcome", "Bienvenue", "Servus", "Moin"]
     var body: some View {
         VStack {
-            VStack {
-                NavigationLink(destination: News()) {Label("News", systemImage: "network")}.padding()
-              
-                NavigationLink(destination: VPlan()) {Label("Vertretungsplan", systemImage: "calendar.badge.clock")}.padding()
-            }
+            ZStack {
+                        Liquid()
+                            .frame(width: 240, height: 240)
+                            .foregroundColor(Color("darkBlue"))
+                            .opacity(0.3)
+
+
+                        Liquid()
+                            .frame(width: 220, height: 220)
+                            .foregroundColor(Color("darkBlue"))
+                            .opacity(0.6)
+
+                        Liquid(samples: 5)
+                            .frame(width: 200, height: 200)
+                            .foregroundColor(Color("darkBlue"))
+                        
+                Text(greetings.randomElement()!).font(.largeTitle).foregroundColor(.white)
+                    }
         }.navigationTitle("Home")
     }
 }

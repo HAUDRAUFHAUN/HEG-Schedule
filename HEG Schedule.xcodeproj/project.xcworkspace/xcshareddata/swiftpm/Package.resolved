@@ -9,6 +9,15 @@
           "revision": "68493a33d862c33c9a9f67ec729b3b7df1b20ade",
           "version": "9.1.2"
         }
+      },
+      {
+        "package": "Liquid",
+        "repositoryURL": "https://github.com/maustinstar/liquid",
+        "state": {
+          "branch": null,
+          "revision": "0fb5b5a2aa34dc5d7c59d1afea33497f25b1aee9",
+          "version": "0.0.1"
+        }
       }
     ]
   },

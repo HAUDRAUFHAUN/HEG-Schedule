@@ -16,6 +16,7 @@
 		222C3DC42662D39E00CF0E12 /* VPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C3DC32662D39E00CF0E12 /* VPlanItem.swift */; };
 		223214012662C2AA0038CA07 /* VPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223214002662C2AA0038CA07 /* VPlan.swift */; };
 		22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22503F7E265EAE4000254DC7 /* FeedKit */; };
+		225E81BB26653E8B002A4E9E /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 225E81BA26653E8B002A4E9E /* Liquid */; };
 		22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC80242663EBC00059FADD /* VPlanRender.swift */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225E81BB26653E8B002A4E9E /* Liquid in Frameworks */,
 				22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +130,7 @@
 			name = "HEG Schedule";
 			packageProductDependencies = (
 				22503F7E265EAE4000254DC7 /* FeedKit */,
+				225E81BA26653E8B002A4E9E /* Liquid */,
 			);
 			productName = "HEG Schedule";
 			productReference = 2212AFE4265D853E00002FC9 /* HEG Schedule.app */;
@@ -158,6 +161,7 @@
 			mainGroup = 2212AFDB265D853D00002FC9;
 			packageReferences = (
 				22503F7D265EAE4000254DC7 /* XCRemoteSwiftPackageReference "FeedKit" */,
+				225E81B926653E8B002A4E9E /* XCRemoteSwiftPackageReference "liquid" */,
 			);
 			productRefGroup = 2212AFE5265D853E00002FC9 /* Products */;
 			projectDirPath = "";
@@ -398,6 +402,14 @@
 				minimumVersion = 9.1.2;
 			};
 		};
+		225E81B926653E8B002A4E9E /* XCRemoteSwiftPackageReference "liquid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/liquid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -405,6 +417,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 22503F7D265EAE4000254DC7 /* XCRemoteSwiftPackageReference "FeedKit" */;
 			productName = FeedKit;
+		};
+		225E81BA26653E8B002A4E9E /* Liquid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 225E81B926653E8B002A4E9E /* XCRemoteSwiftPackageReference "liquid" */;
+			productName = Liquid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
