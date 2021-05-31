@@ -6,22 +6,20 @@
 //
 
 import SwiftUI
+import FeedKit
 
 struct NewsItem: View {
-    @State var title: String!
-    @State var date: Date!
-    @State var link: String!
-    
+    @State var feedItem: RSSFeedItem
     
     var body: some View {
-        Link(destination: URL(string: link)!){
+        Link(destination: URL(string: feedItem.link!)!){
             VStack {
                 HStack{
-                    Text(title).bold().multilineTextAlignment(.leading)
+                    Text(feedItem.title!).bold().multilineTextAlignment(.leading)
                     Spacer()
                 }
                 HStack {
-                    Text(date, style: .date).italic().multilineTextAlignment(.leading)
+                    Text(feedItem.pubDate!, style: .date).italic().multilineTextAlignment(.leading)
                     Spacer()
                 }.padding(.init(top: 2, leading: 0, bottom: 0, trailing: 0))
             }.frame(alignment: .leading).padding().multilineTextAlignment(.leading)
@@ -32,7 +30,7 @@ struct NewsItem: View {
 
 struct NewsItem_Previews: PreviewProvider {
     static var previews: some View {
-        NewsItem(title: "", date: Date(), link: "")
+        NewsItem(feedItem: RSSFeedItem())
             .environment(\.locale, Locale(identifier: "de"))
     }
 }

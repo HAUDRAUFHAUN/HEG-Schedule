@@ -15,17 +15,17 @@ struct News: View {
     var body: some View {
         VStack{
             if((rssFeed?.items!) != nil){
-            List {
-                NewsItem(title: (rssFeed?.items![0].title) as! String, date: (rssFeed?.items![0].pubDate) as! Date, link: (rssFeed?.items![0].link) as! String)
-                NewsItem(title: (rssFeed?.items![1].title) as! String, date: (rssFeed?.items![1].pubDate) as! Date, link: (rssFeed?.items![1].link) as! String)
-                NewsItem(title: (rssFeed?.items![2].title) as! String, date: (rssFeed?.items![2].pubDate) as! Date, link: (rssFeed?.items![2].link) as! String)
-                NewsItem(title: (rssFeed?.items![3].title) as! String, date: (rssFeed?.items![3].pubDate) as! Date, link: (rssFeed?.items![3].link) as! String)
-                NewsItem(title: (rssFeed?.items![4].title) as! String, date: (rssFeed?.items![4].pubDate) as! Date, link: (rssFeed?.items![4].link) as! String)
-                NewsItem(title: (rssFeed?.items![5].title) as! String, date: (rssFeed?.items![5].pubDate) as! Date, link: (rssFeed?.items![5].link) as! String)
-                NewsItem(title: (rssFeed?.items![6].title) as! String, date: (rssFeed?.items![6].pubDate) as! Date, link: (rssFeed?.items![6].link) as! String)
-                NewsItem(title: (rssFeed?.items![7].title) as! String, date: (rssFeed?.items![7].pubDate) as! Date, link: (rssFeed?.items![7].link) as! String)
-                NewsItem(title: (rssFeed?.items![8].title) as! String, date: (rssFeed?.items![8].pubDate) as! Date, link: (rssFeed?.items![8].link) as! String)
-                NewsItem(title: (rssFeed?.items![9].title) as! String, date: (rssFeed?.items![9].pubDate) as! Date, link: (rssFeed?.items![9].link) as! String)
+                List {
+                    NewsItem(feedItem: (rssFeed?.items![0])!)
+                    NewsItem(feedItem: (rssFeed?.items![1])!)
+                    NewsItem(feedItem: (rssFeed?.items![2])!)
+                    NewsItem(feedItem: (rssFeed?.items![3])!)
+                    NewsItem(feedItem: (rssFeed?.items![4])!)
+                    NewsItem(feedItem: (rssFeed?.items![5])!)
+                    NewsItem(feedItem: (rssFeed?.items![6])!)
+                    NewsItem(feedItem: (rssFeed?.items![7])!)
+                    NewsItem(feedItem: (rssFeed?.items![8])!)
+                    NewsItem(feedItem: (rssFeed?.items![9])!)
             }} else {
                 LoadingSpinner()
             }
