@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct Nav: View {
+    @State private var selectedView: Int? = 0
+    
     var body: some View {
         NavigationView {
             List{
-                NavigationLink(destination: Home() ){Label("Home", systemImage: "house")}
+                NavigationLink(destination: Home(), tag: 1, selection: $selectedView){Label("Home", systemImage: "house")}
       
-                NavigationLink(destination: News()) {Label("News", systemImage: "network")}
+                NavigationLink(destination: News(), tag: 2, selection: $selectedView) {Label("News", systemImage: "network")}
               
-                NavigationLink(destination: VPlan()) {Label("Vertretungsplan", systemImage: "calendar.badge.clock")}
-            } .navigationTitle("HEG Schedule")
+                NavigationLink(destination: VPlan(), tag: 3, selection: $selectedView) {Label("Vertretungsplan", systemImage: "calendar.badge.clock")}
+            }.navigationTitle("HEG Schedule")
+        }.onAppear{
+            let device = UIDevice.current
+            if device.model == "iPad"{
+                self.selectedView = 1
+            } else {
+                self.selectedView = 0
+            }
         }
-      
     }
 }
 
