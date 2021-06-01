@@ -8,28 +8,27 @@
 import SwiftUI
 
 struct LoadingSpinner: View {
-    @State private var spinXLarge = false
-    @State private var spinLarge = false
-    @State private var spinMedium = false
-    @State private var spinSmall = false
-    @State private var spinXSmall = false
+    let style = StrokeStyle(lineWidth: 5, lineCap: .round)
+    @State var animate = false
+    let color1 = Color("darkBlue")
+    let color2 = Color("darkBlue").opacity(0.5)
+    
     
     var body: some View {
-                VStack(alignment: .leading, spacing: 50) {
-                    HStack {
-                        Circle() // Large
-                        .trim(from: 1/4, to: 1)
-                            .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
-                            .foregroundColor(Color("darkBlue"))
-                            .frame(width: 32, height: 32)
-                        .rotationEffect(.degrees(spinLarge ? 360 : 0))
-                        .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
-                        .onAppear() {
-                            self.spinLarge.toggle()
-                        }
-                    }
-                    
-                    }}
+        HStack {
+            ZStack {
+                Circle()
+                    .trim(from: 0, to: 0.7)
+                    .stroke(
+                        AngularGradient(gradient: .init(colors: [color1, color2]), center: .center),
+                        style: style)
+                    .rotationEffect(Angle(degrees: animate ? 360 : 0))
+                    .animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
+            }.onAppear(){
+                self.animate.toggle()
+            }.frame(width: 40, height: 40, alignment: .center)
+        }
+    }
 }
 
 struct LoadingSpinner_Previews: PreviewProvider {
