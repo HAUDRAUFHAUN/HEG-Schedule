@@ -9,7 +9,7 @@ import SwiftUI
 import Liquid
 
 struct Home: View {
-    private let greetings = ["Willkommen", "Welcome", "Bienvenue", "Servus", "Moin"]
+    private let greetings = ["Willkommen", "Welcome", "Bienvenue", "Servus", "Moin", "Hallo", "Hello", "Salut"]
     var body: some View {
         VStack {
             ZStack {
