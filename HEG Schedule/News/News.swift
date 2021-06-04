@@ -27,7 +27,7 @@ struct News: View {
                     NewsItem(feedItem: (rssFeed?.items![8])!)
                     NewsItem(feedItem: (rssFeed?.items![9])!)
             }} else {
-                LoadingSpinner()
+               LoaderView()
             }
         }.onAppear(perform: loadData).navigationTitle("News")
     }

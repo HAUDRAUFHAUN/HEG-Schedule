@@ -17,10 +17,12 @@
 		223214012662C2AA0038CA07 /* VPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223214002662C2AA0038CA07 /* VPlan.swift */; };
 		22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22503F7E265EAE4000254DC7 /* FeedKit */; };
 		225E81BB26653E8B002A4E9E /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 225E81BA26653E8B002A4E9E /* Liquid */; };
+		22746773266AC6D000093235 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746772266AC6D000093235 /* LoaderView.swift */; };
+		22746775266AC71600093235 /* LoaderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746774266AC71600093235 /* LoaderState.swift */; };
+		22746778266AC74B00093235 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746777266AC74B00093235 /* Loader.swift */; };
 		22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC80242663EBC00059FADD /* VPlanRender.swift */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
-		22FCCFA726656392005F5F29 /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCCFA626656392005F5F29 /* LoadingSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +37,12 @@
 		222C3DC32662D39E00CF0E12 /* VPlanItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanItem.swift; sourceTree = "<group>"; };
 		223214002662C2AA0038CA07 /* VPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlan.swift; sourceTree = "<group>"; };
 		22503F71265EA56300254DC7 /* HEG Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HEG Schedule.entitlements"; sourceTree = "<group>"; };
+		22746772266AC6D000093235 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		22746774266AC71600093235 /* LoaderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderState.swift; sourceTree = "<group>"; };
+		22746777266AC74B00093235 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		22CC80242663EBC00059FADD /* VPlanRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanRender.swift; sourceTree = "<group>"; };
 		22EA2B2A265E5BB0008E0EC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		22FB6807266030050017FEE6 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		22FCCFA626656392005F5F29 /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,24 @@
 			path = VPlan;
 			sourceTree = "<group>";
 		};
+		22746771266AC6B600093235 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				22746776266AC73000093235 /* Support Shapes */,
+				22746772266AC6D000093235 /* LoaderView.swift */,
+				22746774266AC71600093235 /* LoaderState.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		22746776266AC73000093235 /* Support Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				22746777266AC74B00093235 /* Loader.swift */,
+			);
+			path = "Support Shapes";
+			sourceTree = "<group>";
+		};
 		22FB68062660298F0017FEE6 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +140,7 @@
 		22FCCFA52665637A005F5F29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				22FCCFA626656392005F5F29 /* LoadingSpinner.swift */,
+				22746771266AC6B600093235 /* Loader */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -202,12 +224,14 @@
 			files = (
 				223214012662C2AA0038CA07 /* VPlan.swift in Sources */,
 				2212AFEA265D853E00002FC9 /* ContentView.swift in Sources */,
+				22746778266AC74B00093235 /* Loader.swift in Sources */,
 				222C3DC42662D39E00CF0E12 /* VPlanItem.swift in Sources */,
 				22FB6808266030050017FEE6 /* NewsItem.swift in Sources */,
 				2212AFE8265D853E00002FC9 /* HEG_ScheduleApp.swift in Sources */,
 				22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */,
-				22FCCFA726656392005F5F29 /* LoadingSpinner.swift in Sources */,
+				22746775266AC71600093235 /* LoaderState.swift in Sources */,
 				2212AFFD265DA20600002FC9 /* Home.swift in Sources */,
+				22746773266AC6D000093235 /* LoaderView.swift in Sources */,
 				22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */,
 				2212AFFB265D8A6400002FC9 /* Nav.swift in Sources */,
 			);

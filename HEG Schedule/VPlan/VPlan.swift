@@ -26,7 +26,7 @@ struct VPlan: View {
                 List(results) { item in
                     VPlanItem(timetabledata: item)
             }} else {
-                LoadingSpinner() 
+                LoaderView()
             }}.onAppear(perform: {
                 loadPlans()
             }).navigationTitle("Vertretungspläne")
