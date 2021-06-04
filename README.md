@@ -4,3 +4,9 @@
 </div>
 
 An App for HEG members.
+
+## usage of external packages // templates
+I used following external packages // templates, thanks to all the creators to providing them to OpenSource! 🙏
+- [FeedKit](https://github.com/nmdias/FeedKit) by [nmdias](https://github.com/nmdias) for parsing the RSS newsfeed
+- [liquid](https://github.com/maustinstar/liquid) by [maustinstar](https://github.com/maustinstar) for for very cool animated backgrounds
+- Animations from the [SwiftUI-Animations](https://github.com/Shubham0812/SwiftUI-Animations) by [Shubham0812](https://github.com/Shubham0812)
