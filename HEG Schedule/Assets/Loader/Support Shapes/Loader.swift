@@ -27,7 +27,7 @@ struct Loader: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             Capsule()
                 .stroke(style: StrokeStyle(lineWidth: 14, lineCap: .round))
-                .foregroundColor(Color.white)
+                .foregroundColor(Color("loaderStroke"))
                 .frame(width: capsuleWidth, height: capsuleHeight, alignment: .center)
                 .animation(.easeOut(duration: 0.35))
                 .offset(x: self.xOffset, y: self.yOffset)
@@ -97,7 +97,7 @@ struct Loader: View {
 struct Loader_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.black
+            Color("loaderBackground")
                 .edgesIgnoringSafeArea(.all)
             Loader(loaderState: .down, timerDuration: 0.35, startAnimating: .constant(true))
         }

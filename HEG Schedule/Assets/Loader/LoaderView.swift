@@ -16,7 +16,7 @@ struct LoaderView: View {
     // MARK:- views
     var body: some View {
         ZStack {
-            Color.black
+            Color("loaderBackground")
                 .edgesIgnoringSafeArea(.all)
             ZStack {
                 Loader(loaderState: .down, timerDuration: 0.35, startAnimating: $animateLoaders)
