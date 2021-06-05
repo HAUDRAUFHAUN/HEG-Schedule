@@ -20,6 +20,7 @@
 		22746773266AC6D000093235 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746772266AC6D000093235 /* LoaderView.swift */; };
 		22746775266AC71600093235 /* LoaderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746774266AC71600093235 /* LoaderState.swift */; };
 		22746778266AC74B00093235 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746777266AC74B00093235 /* Loader.swift */; };
+		22A97F57266BE1A000A0E2CC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22A97F56266BE1A000A0E2CC /* Settings.bundle */; };
 		22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC80242663EBC00059FADD /* VPlanRender.swift */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
@@ -40,6 +41,7 @@
 		22746772266AC6D000093235 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		22746774266AC71600093235 /* LoaderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderState.swift; sourceTree = "<group>"; };
 		22746777266AC74B00093235 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		22A97F56266BE1A000A0E2CC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		22CC80242663EBC00059FADD /* VPlanRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanRender.swift; sourceTree = "<group>"; };
 		22EA2B2A265E5BB0008E0EC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		22FB6807266030050017FEE6 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				2212AFEB265D854300002FC9 /* Assets.xcassets */,
 				2212AFF0265D854300002FC9 /* Info.plist */,
 				2212AFED265D854300002FC9 /* Preview Content */,
+				22A97F56266BE1A000A0E2CC /* Settings.bundle */,
 			);
 			path = "HEG Schedule";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2212AFEF265D854300002FC9 /* Preview Assets.xcassets in Resources */,
+				22A97F57266BE1A000A0E2CC /* Settings.bundle in Resources */,
 				2212AFEC265D854300002FC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,9 +379,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Dietrich-Poensgen.HEG-Schedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -400,9 +404,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Dietrich-Poensgen.HEG-Schedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

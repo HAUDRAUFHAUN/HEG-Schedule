@@ -10,26 +10,31 @@ import Liquid
 
 struct Home: View {
     private let greetings = ["Willkommen", "Welcome", "Bienvenue", "Servus", "Moin", "Hallo", "Hello", "Salut"]
+    @State private var username = UserDefaults.standard.string(forKey: "name_preference")
+   
+       
     var body: some View {
         VStack {
             ZStack {
                         Liquid()
-                            .frame(width: 240, height: 240)
+                            .frame(width: 440, height: 340)
                             .foregroundColor(Color("darkBlue"))
                             .opacity(0.3)
-
-
                         Liquid()
-                            .frame(width: 220, height: 220)
+                            .frame(width: 420, height: 320)
                             .foregroundColor(Color("darkBlue"))
                             .opacity(0.6)
 
                         Liquid(samples: 5)
-                            .frame(width: 200, height: 200)
+                            .frame(width: 400, height: 300)
                             .foregroundColor(Color("darkBlue"))
-                        
-                Text(greetings.randomElement()!).font(.largeTitle).foregroundColor(.white)
+                HStack {
+                    Text(greetings.randomElement()!).font(.largeTitle).foregroundColor(.white)
+                    if(username != nil) {
+                        Text(username!).font(.largeTitle).foregroundColor(.white)
                     }
+                }
+            }
         }.navigationTitle("Home")
     }
 }
