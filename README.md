@@ -8,8 +8,16 @@ An App for HEG members.
 ## features
 - Daily schedule [COMING SOON]
 - Vertretungspläne
+<img alt="vplan-iphone" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/blob/main/.github/img/iPhone12Blue-vplan.png" height="480" />
+
 - News
 - available on iOS, iPadOS and macOS
+<div align="center">
+  <img alt="iOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/blob/main/.github/img/iPhone12Blue-nav.png" height="480" />
+  <img alt="iPadOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/raw/main/.github/img/iPadPro11-inchSilver.png" height="480" />
+  <img alt="macOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/raw/main/.github/img/Mac-Light-Mockup.png" height="480" />
+ </div>
+
 
 ## usage of external packages // templates
 I used following external packages // templates, thanks to all the creators to providing them to OpenSource! 🙏
