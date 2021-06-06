@@ -5,6 +5,12 @@
 
 An App for HEG members.
 
+## features
+- Daily schedule [COMING SOON]
+- Vertretungspläne
+- News
+- available on iOS, iPadOS and macOS
+
 ## usage of external packages // templates
 I used following external packages // templates, thanks to all the creators to providing them to OpenSource! 🙏
 - [FeedKit](https://github.com/nmdias/FeedKit) by [nmdias](https://github.com/nmdias) for parsing the RSS newsfeed
