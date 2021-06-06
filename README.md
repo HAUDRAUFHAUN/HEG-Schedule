@@ -13,9 +13,9 @@ An App for HEG members.
 - News
 - available on iOS, iPadOS and macOS
 <div align="center">
-  <img alt="iOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/blob/main/.github/img/iPhone12Blue-nav.png" height="480" />
-  <img alt="iPadOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/raw/main/.github/img/iPadPro11-inchSilver.png" height="480" />
-  <img alt="macOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/raw/main/.github/img/Mac-Light-Mockup.png" height="480" />
+  <img alt="iOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/blob/main/.github/img/iPhone12Blue-nav.png" height="440" />
+  <img alt="iPadOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/raw/main/.github/img/iPadPro11-inchSilver.png" height="440" />
+  <img alt="macOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/raw/main/.github/img/Mac-Light-Mockup.png" height="440" />
  </div>
 
 
