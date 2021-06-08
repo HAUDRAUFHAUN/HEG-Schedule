@@ -17,6 +17,13 @@
 		223214012662C2AA0038CA07 /* VPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223214002662C2AA0038CA07 /* VPlan.swift */; };
 		22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22503F7E265EAE4000254DC7 /* FeedKit */; };
 		225E81BB26653E8B002A4E9E /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 225E81BA26653E8B002A4E9E /* Liquid */; };
+		2273229F266FD8DF00B1900C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225FBAE3266F8B2F00F5F4CD /* WidgetKit.framework */; };
+		227322A0266FD8DF00B1900C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225FBAE5266F8B2F00F5F4CD /* SwiftUI.framework */; };
+		227322A3266FD8DF00B1900C /* HEG_Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227322A2266FD8DF00B1900C /* HEG_Widgets.swift */; };
+		227322A6266FD8E300B1900C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227322A5266FD8E300B1900C /* Assets.xcassets */; };
+		227322A8266FD8E300B1900C /* HEG_Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 227322A4266FD8DF00B1900C /* HEG_Widgets.intentdefinition */; };
+		227322A9266FD8E300B1900C /* HEG_Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 227322A4266FD8DF00B1900C /* HEG_Widgets.intentdefinition */; };
+		227322AC266FD8E300B1900C /* HEG-WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2273229E266FD8DF00B1900C /* HEG-WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		22746773266AC6D000093235 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746772266AC6D000093235 /* LoaderView.swift */; };
 		22746775266AC71600093235 /* LoaderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746774266AC71600093235 /* LoaderState.swift */; };
 		22746778266AC74B00093235 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746777266AC74B00093235 /* Loader.swift */; };
@@ -25,6 +32,30 @@
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		227322AA266FD8E300B1900C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2212AFDC265D853D00002FC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2273229D266FD8DF00B1900C;
+			remoteInfo = "HEG-WidgetsExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		225FBAF4266F8B3200F5F4CD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				227322AC266FD8E300B1900C /* HEG-WidgetsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2212AFE4265D853E00002FC9 /* HEG Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HEG Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +69,14 @@
 		222C3DC32662D39E00CF0E12 /* VPlanItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanItem.swift; sourceTree = "<group>"; };
 		223214002662C2AA0038CA07 /* VPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlan.swift; sourceTree = "<group>"; };
 		22503F71265EA56300254DC7 /* HEG Schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HEG Schedule.entitlements"; sourceTree = "<group>"; };
+		225FBAE3266F8B2F00F5F4CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		225FBAE5266F8B2F00F5F4CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2273229E266FD8DF00B1900C /* HEG-WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HEG-WidgetsExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		227322A2266FD8DF00B1900C /* HEG_Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEG_Widgets.swift; sourceTree = "<group>"; };
+		227322A4266FD8DF00B1900C /* HEG_Widgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = HEG_Widgets.intentdefinition; sourceTree = "<group>"; };
+		227322A5266FD8E300B1900C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		227322A7266FD8E300B1900C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227322AD266FD8E300B1900C /* HEG-WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HEG-WidgetsExtension.entitlements"; sourceTree = "<group>"; };
 		22746772266AC6D000093235 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		22746774266AC71600093235 /* LoaderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderState.swift; sourceTree = "<group>"; };
 		22746777266AC74B00093235 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -57,13 +96,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2273229B266FD8DF00B1900C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227322A0266FD8DF00B1900C /* SwiftUI.framework in Frameworks */,
+				2273229F266FD8DF00B1900C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2212AFDB265D853D00002FC9 = {
 			isa = PBXGroup;
 			children = (
+				227322AD266FD8E300B1900C /* HEG-WidgetsExtension.entitlements */,
 				2212AFE6265D853E00002FC9 /* HEG Schedule */,
+				227322A1266FD8DF00B1900C /* HEG-Widgets */,
+				225FBAE2266F8B2F00F5F4CD /* Frameworks */,
 				2212AFE5265D853E00002FC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				2212AFE4265D853E00002FC9 /* HEG Schedule.app */,
+				2273229E266FD8DF00B1900C /* HEG-WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +163,26 @@
 				22CC80242663EBC00059FADD /* VPlanRender.swift */,
 			);
 			path = VPlan;
+			sourceTree = "<group>";
+		};
+		225FBAE2266F8B2F00F5F4CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				225FBAE3266F8B2F00F5F4CD /* WidgetKit.framework */,
+				225FBAE5266F8B2F00F5F4CD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		227322A1266FD8DF00B1900C /* HEG-Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				227322A2266FD8DF00B1900C /* HEG_Widgets.swift */,
+				227322A4266FD8DF00B1900C /* HEG_Widgets.intentdefinition */,
+				227322A5266FD8E300B1900C /* Assets.xcassets */,
+				227322A7266FD8E300B1900C /* Info.plist */,
+			);
+			path = "HEG-Widgets";
 			sourceTree = "<group>";
 		};
 		22746771266AC6B600093235 /* Loader */ = {
@@ -158,10 +230,12 @@
 				2212AFE0265D853E00002FC9 /* Sources */,
 				2212AFE1265D853E00002FC9 /* Frameworks */,
 				2212AFE2265D853E00002FC9 /* Resources */,
+				225FBAF4266F8B3200F5F4CD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				227322AB266FD8E300B1900C /* PBXTargetDependency */,
 			);
 			name = "HEG Schedule";
 			packageProductDependencies = (
@@ -171,6 +245,23 @@
 			productName = "HEG Schedule";
 			productReference = 2212AFE4265D853E00002FC9 /* HEG Schedule.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2273229D266FD8DF00B1900C /* HEG-WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227322B0266FD8E300B1900C /* Build configuration list for PBXNativeTarget "HEG-WidgetsExtension" */;
+			buildPhases = (
+				2273229A266FD8DF00B1900C /* Sources */,
+				2273229B266FD8DF00B1900C /* Frameworks */,
+				2273229C266FD8DF00B1900C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HEG-WidgetsExtension";
+			productName = "HEG-WidgetsExtension";
+			productReference = 2273229E266FD8DF00B1900C /* HEG-WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -182,6 +273,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					2212AFE3265D853E00002FC9 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					2273229D266FD8DF00B1900C = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -204,6 +298,7 @@
 			projectRoot = "";
 			targets = (
 				2212AFE3265D853E00002FC9 /* HEG Schedule */,
+				2273229D266FD8DF00B1900C /* HEG-WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +314,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2273229C266FD8DF00B1900C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227322A6266FD8E300B1900C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -227,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223214012662C2AA0038CA07 /* VPlan.swift in Sources */,
+				227322A9266FD8E300B1900C /* HEG_Widgets.intentdefinition in Sources */,
 				2212AFEA265D853E00002FC9 /* ContentView.swift in Sources */,
 				22746778266AC74B00093235 /* Loader.swift in Sources */,
 				222C3DC42662D39E00CF0E12 /* VPlanItem.swift in Sources */,
@@ -241,7 +345,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2273229A266FD8DF00B1900C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227322A3266FD8DF00B1900C /* HEG_Widgets.swift in Sources */,
+				227322A8266FD8E300B1900C /* HEG_Widgets.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		227322AB266FD8E300B1900C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2273229D266FD8DF00B1900C /* HEG-WidgetsExtension */;
+			targetProxy = 227322AA266FD8E300B1900C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2212AFF1265D854300002FC9 /* Debug */ = {
@@ -363,6 +484,7 @@
 		2212AFF4265D854300002FC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "HEG Schedule/HEG Schedule.entitlements";
@@ -388,6 +510,7 @@
 		2212AFF5265D854300002FC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "HEG Schedule/HEG Schedule.entitlements";
@@ -410,6 +533,52 @@
 			};
 			name = Release;
 		};
+		227322AE266FD8E300B1900C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "HEG-WidgetsExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UYKU28UM7P;
+				INFOPLIST_FILE = "HEG-Widgets/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dietrich-Poensgen.HEG-Schedule.HEG-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		227322AF266FD8E300B1900C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "HEG-WidgetsExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UYKU28UM7P;
+				INFOPLIST_FILE = "HEG-Widgets/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dietrich-Poensgen.HEG-Schedule.HEG-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +596,15 @@
 			buildConfigurations = (
 				2212AFF4265D854300002FC9 /* Debug */,
 				2212AFF5265D854300002FC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227322B0266FD8E300B1900C /* Build configuration list for PBXNativeTarget "HEG-WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227322AE266FD8E300B1900C /* Debug */,
+				227322AF266FD8E300B1900C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
