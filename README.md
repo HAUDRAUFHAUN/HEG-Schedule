@@ -11,6 +11,7 @@ An App for HEG members.
 <img alt="vplan-iphone" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/blob/main/.github/img/iPhone12Blue-vplan.png" height="480" />
 
 - News
+- Widgets for fast access of important informations [WIP]
 - available on iOS, iPadOS and macOS
 <div align="center">
   <img alt="iOS" src="https://github.com/HAUDRAUFHAUN/HEG-Schedule/blob/main/.github/img/iPhone12Blue-nav.png" height="440" />
