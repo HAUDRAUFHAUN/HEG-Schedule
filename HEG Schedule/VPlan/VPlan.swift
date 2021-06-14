@@ -11,6 +11,9 @@ import SwiftUI
 struct VPlan: View {
     @State var results = [Timetable]()
     
+    @AppStorage("timetable", store: UserDefaults(suiteName: "group.Dietrich-Poensgen.HEG-Schedule"))
+    var timetableData: Data = Data()
+    
     var body: some View {
         VStack{
             if(results.count > 0){
@@ -35,6 +38,7 @@ struct VPlan: View {
                     if let response = try? JSONDecoder().decode([Timetable].self, from: data) {
                         DispatchQueue.main.async {
                             self.results = response
+                            self.timetableData = data
                         }
                         return
                     }

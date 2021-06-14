@@ -7,63 +7,72 @@
 
 import WidgetKit
 import SwiftUI
-import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+struct TimetableEntry: TimelineEntry {
+    let date = Date()
+    
+    let timetable: Timetable
+}
+
+struct Provider: TimelineProvider {
+    @AppStorage("timetable", store: UserDefaults(suiteName: "group.Dietrich-Poensgen.HEG-Schedule"))
+    var timetableData: Data = Data()
+    
+    func placeholder(in context: Context) -> TimetableEntry {
+        let timetable = TimetableEntry(timetable: Timetable(id: UUID(), title: "No data available", url: "", date: "", preview: "", secondTitle: ""))
+        
+        return timetable
     }
-
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    
+    func getSnapshot(in context: Context, completion: @escaping (TimetableEntry) -> Void) {
+        guard let timetable = try? JSONDecoder().decode(Timetable.self, from: timetableData) else { return }
+        let entry = TimetableEntry(timetable: timetable)
         completion(entry)
     }
-
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+    
+    func getTimeline(in context: Context, completion: @escaping (Timeline<TimetableEntry>) -> Void) {
+        guard let url = URL(string: "https://hegschedule-server-haudraufhaun.vercel.app/") else {
+            print("Invalid URL")
+            return
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data {
+                    if let response = try? JSONDecoder().decode([Timetable].self, from: data) {
+                        DispatchQueue.main.async {
+                            self.timetableData = data
+                        }
+                        return
+                    }
+                }
+            }.resume()
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
+struct PlaceholderView: View {
+    var body: some View {
+            VPlanItem(timetabledata: Timetable(id: UUID(), title: "No data available", url: "", date: "", preview: "", secondTitle: ""))
+    }
 }
 
-struct HEG_WidgetsEntryView : View {
-    var entry: Provider.Entry
-
+struct WidgetEntryView: View {
+    let entry: Provider.Entry
+    
     var body: some View {
-        Text(entry.date, style: .time)
+        VPlanItem(timetabledata: entry.timetable)
     }
 }
 
 @main
-struct HEG_Widgets: Widget {
-    let kind: String = "HEG_Widgets"
-
+struct VPlanWidget: Widget {
+    private let kind = "HEG_Widgets"
+    
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            HEG_WidgetsEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
-    }
-}
-
-struct HEG_Widgets_Previews: PreviewProvider {
-    static var previews: some View {
-        HEG_WidgetsEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .configurationDisplayName("Vertretungspläne")
+        .description("Zeigt aktuell vorhandene Vertretungspläne an")
     }
 }

@@ -33,6 +33,8 @@
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
 		22FD601A2677942200BF02BF /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FD60192677942200BF02BF /* Timetable.swift */; };
 		22FD601B2677942200BF02BF /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FD60192677942200BF02BF /* Timetable.swift */; };
+		22FD601C2677AB1200BF02BF /* VPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C3DC32662D39E00CF0E12 /* VPlanItem.swift */; };
+		22FD601D2677AB1B00BF02BF /* VPlanRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC80242663EBC00059FADD /* VPlanRender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,7 +366,9 @@
 			files = (
 				227322A3266FD8DF00B1900C /* HEG_Widgets.swift in Sources */,
 				227322A8266FD8E300B1900C /* HEG_Widgets.intentdefinition in Sources */,
+				22FD601C2677AB1200BF02BF /* VPlanItem.swift in Sources */,
 				22FD601B2677942200BF02BF /* Timetable.swift in Sources */,
+				22FD601D2677AB1B00BF02BF /* VPlanRender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
