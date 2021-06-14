@@ -8,15 +8,6 @@
 import SwiftUI
 
 
-struct Timetable: Codable, Identifiable {
-    let id = UUID()
-    let title: String
-    let url: String
-    let date: String
-    let preview: String
-    let secondTitle: String
-}
-
 struct VPlan: View {
     @State var results = [Timetable]()
     
