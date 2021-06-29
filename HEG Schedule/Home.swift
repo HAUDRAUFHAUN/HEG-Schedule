@@ -9,7 +9,7 @@ import SwiftUI
 import Liquid
 
 struct Home: View {
-    private let greetings = ["Willkommen", "Welcome", "Bienvenue", "Servus", "Moin", "Hallo", "Hello", "Salut"]
+    private let greetings = ["Willkommen", "Welcome", "Bienvenue", "Servus", "Moin", "Hallo", "Hello", "Salut", "Hey", "Hej", "Ahoj"]
     @State private var username = UserDefaults.standard.string(forKey: "name_preference")
    
        
