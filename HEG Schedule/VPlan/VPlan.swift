@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftUIRefresh
 
 
 struct VPlan: View {
+    @State private var isShowing = false
     @State var results = [Timetable]()
     
     @AppStorage("timetable", store: UserDefaults(suiteName: "group.Dietrich-Poensgen.HEG-Schedule"))
@@ -19,7 +21,7 @@ struct VPlan: View {
             if(results.count > 0){
                 List(results) { item in
                     VPlanItem(timetabledata: item)
-            }} else {
+                }.pullToRefresh(isShowing:  $isShowing, onRefresh: loadPlans)} else {
                 LoaderView()
             }}.onAppear(perform: {
                 loadPlans()
@@ -44,6 +46,7 @@ struct VPlan: View {
                     }
                 }
             }.resume()
+        self.isShowing = false
     }
 }
 

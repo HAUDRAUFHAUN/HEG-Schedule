@@ -28,6 +28,7 @@
 		22746775266AC71600093235 /* LoaderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746774266AC71600093235 /* LoaderState.swift */; };
 		22746778266AC74B00093235 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22746777266AC74B00093235 /* Loader.swift */; };
 		22A97F57266BE1A000A0E2CC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22A97F56266BE1A000A0E2CC /* Settings.bundle */; };
+		22BBE36D26B876A500AF41D6 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 22BBE36C26B876A500AF41D6 /* SwiftUIRefresh */; };
 		22CC80252663EBC00059FADD /* VPlanRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC80242663EBC00059FADD /* VPlanRender.swift */; };
 		22EA2B2B265E5BB0008E0EC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2B2A265E5BB0008E0EC6 /* News.swift */; };
 		22FB6808266030050017FEE6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB6807266030050017FEE6 /* NewsItem.swift */; };
@@ -96,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BBE36D26B876A500AF41D6 /* SwiftUIRefresh in Frameworks */,
 				225E81BB26653E8B002A4E9E /* Liquid in Frameworks */,
 				22503F7F265EAE4000254DC7 /* FeedKit in Frameworks */,
 			);
@@ -255,6 +257,7 @@
 			packageProductDependencies = (
 				22503F7E265EAE4000254DC7 /* FeedKit */,
 				225E81BA26653E8B002A4E9E /* Liquid */,
+				22BBE36C26B876A500AF41D6 /* SwiftUIRefresh */,
 			);
 			productName = "HEG Schedule";
 			productReference = 2212AFE4265D853E00002FC9 /* HEG Schedule.app */;
@@ -306,6 +309,7 @@
 			packageReferences = (
 				22503F7D265EAE4000254DC7 /* XCRemoteSwiftPackageReference "FeedKit" */,
 				225E81B926653E8B002A4E9E /* XCRemoteSwiftPackageReference "liquid" */,
+				22BBE36B26B876A500AF41D6 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = 2212AFE5265D853E00002FC9 /* Products */;
 			projectDirPath = "";
@@ -646,6 +650,14 @@
 				minimumVersion = 0.0.1;
 			};
 		};
+		22BBE36B26B876A500AF41D6 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -658,6 +670,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 225E81B926653E8B002A4E9E /* XCRemoteSwiftPackageReference "liquid" */;
 			productName = Liquid;
+		};
+		22BBE36C26B876A500AF41D6 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22BBE36B26B876A500AF41D6 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
