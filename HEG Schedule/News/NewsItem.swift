@@ -15,11 +15,11 @@ struct NewsItem: View {
         Link(destination: URL(string: feedItem.link!)!){
             VStack {
                 HStack{
-                    Text(feedItem.title!).bold().multilineTextAlignment(.leading)
+                    Text(feedItem.title!).bold().foregroundColor(.black).multilineTextAlignment(.leading)
                     Spacer()
                 }
                 HStack {
-                    Text(feedItem.pubDate!, style: .date).italic().multilineTextAlignment(.leading)
+                    Text(feedItem.pubDate!, style: .date).italic().foregroundColor(.black).multilineTextAlignment(.leading)
                     Spacer()
                 }.padding(.init(top: 2, leading: 0, bottom: 0, trailing: 0))
             }.frame(alignment: .leading).padding().multilineTextAlignment(.leading)
