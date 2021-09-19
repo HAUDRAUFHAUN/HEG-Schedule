@@ -3,7 +3,7 @@
   <h1>🏫 HEG-Schedule 🎒</h1>
 </div>
 
-An App for HEG members.
+An (unofficial) App for HEG members.
 
 ## features
 - Daily schedule [COMING SOON]
