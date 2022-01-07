@@ -29,7 +29,7 @@ struct VPlan: View {
     }
     
     func loadPlans(){
-        guard let url = URL(string: "https://hegschedule-server-haudraufhaun.vercel.app/") else {
+        guard let url = URL(string: "https://hegschedule-server.vercel.app/") else {
             print("Invalid URL")
             return
         }
