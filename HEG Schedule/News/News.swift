@@ -33,7 +33,7 @@ struct News: View {
     }
     
     func loadData() {
-        let feedUrl: URL = URL(string: "https://heg-uelzen.de/hpp/rss.xml")!
+        let feedUrl: URL = URL(string: "https://www.heg-uelzen.de/?feed=rss")!
         let parser = FeedParser(URL: feedUrl)
         
         parser.parseAsync { (result) in
