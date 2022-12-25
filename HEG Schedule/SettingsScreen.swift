@@ -48,6 +48,11 @@ struct SettingsScreen: View {
                                Text(Bundle.main.appVersionLong)
                            }
                            HStack {
+                               Text("Herzog-Ernst-Logo von Dorli Harms")
+                                   .font(.system(size: 10, weight: .light))
+                                       .multilineTextAlignment(.center)
+                           }
+                           HStack {
                                Text(Bundle.main.copyright)
                                        .font(.system(size: 10, weight: .thin))
                                        .multilineTextAlignment(.center)
