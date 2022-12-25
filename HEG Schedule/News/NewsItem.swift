@@ -7,9 +7,13 @@
 
 import SwiftUI
 import FeedKit
+import Foundation
 
 struct NewsItem: View {
     @State var feedItem: RSSFeedItem
+    
+    //dateFormatter.locale = Locale(identifier: "de-DE")
+    
     
     var body: some View {
         Link(destination: URL(string: feedItem.link!)!){
@@ -19,13 +23,24 @@ struct NewsItem: View {
                     Spacer()
                 }
                 HStack {
-                    Text(feedItem.pubDate!, style: .date).italic().foregroundColor(Color("NewsItemTextColor")).multilineTextAlignment(.leading)
+                    Text(formatDateDE(dateToFormat: feedItem.pubDate!)).italic().foregroundColor(Color("NewsItemTextColor")).multilineTextAlignment(.leading)
                     Spacer()
                 }.padding(.init(top: 2, leading: 0, bottom: 0, trailing: 0))
             }.frame(alignment: .leading).padding().multilineTextAlignment(.leading)
         }
-        }
     }
+    
+    func formatDateDE(dateToFormat: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        
+        dateFormatter.locale = Locale(identifier: "de-DE")
+        
+        let newDate = dateFormatter.string(from: dateToFormat)
+        return newDate
+    }
+}
 
 
 struct NewsItem_Previews: PreviewProvider {
